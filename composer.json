@@ -1,0 +1,10 @@
+{
+    "name": "anyman/test-package",
+    "authors": [
+        {
+            "name": "김광철",
+            "email": "anyman@afreecatv.com"
+        }
+    ],
+    "require": {}
+}
