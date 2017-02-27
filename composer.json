@@ -6,5 +6,16 @@
             "email": "anyman@afreecatv.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "^4.0|^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Afreecatv\\Auth\\": "src/"
+        },
+        "files":[
+            "src/helpers.php"
+        ]
+    }
 }
