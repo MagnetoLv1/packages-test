@@ -5,8 +5,9 @@ Laravel 패키지 제작 Demo
 Composer 를 이용한 패키지 생성
 conposer init 실행
 
+> $ composer init
 ```bash
-$ composer init
+
 
   Welcome to the Composer config generator
 
@@ -131,7 +132,33 @@ class PackageServiceProvider extends ServiceProvider
 
 ### GitHup (저장소)에 내소스 올리기
 
+```bash
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/lomi525/test.git
+git push -u origin master
+```
+
+
+### Package Repository 등록하기
 
 
 
 
+##### 자동 업데이트 설정 #####
+github 에 패키지의 새 버전을 릴리스했다고 가정해 보자.
+릴리스마다 Packagist 에도 올려야 한다면 매우 번거로울 것이다. github 의 hook 을 설정하면 새 버전 릴리스시 자동으로 Packagist 에 반영되도록 할 수 있다.
+
+1) https://packagist.org/profile/ 에 들어간 후에 Your API Token 에 있는 토큰을 복사한다.
+![API_TOKEN](https://raw.githubusercontent.com/lomi525/packages-test/master/images/1.png)
+
+2) github 에 로그인 한후에 프로젝트로 들어간다.
+우측의 프로젝트 Settings 버튼을 클릭한다. 상단의 Settings 버튼은 계정 설정이므로 프로젝트 설정으로 들어가야 한다.
+
+Integrations & Services  를 클릭한다.
+Add Service 를 클릭한 후에 Packagist 를 찾아서 등록한다.
+
+User 항목에 id를 입력하고 Token 항목에 1번에서 복사한 API token을 붙여 넣는다.
+
+Add Service 를 클릭하여 저장한다.
