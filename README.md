@@ -157,10 +157,28 @@ github 에 패키지의 새 버전을 릴리스했다고 가정해 보자.
 3) 우측의 프로젝트 Settings 버튼을 클릭한다. 상단의 Settings 버튼은 계정 설정이므로 프로젝트 설정으로 들어가야 한다.
 ![API_TOKEN](https://raw.githubusercontent.com/lomi525/packages-test/master/images/3.png)
 4) Integrations & Services  를 클릭한다.
-5)Add Service 를 클릭한 후에 Packagist 를 찾아서 등록한다.
+5) Add Service 를 클릭한 후에 Packagist 를 찾아서 등록한다.
 ![API_TOKEN](https://raw.githubusercontent.com/lomi525/packages-test/master/images/5.png)
 
 
-6)User 항목에 id를 입력하고 Token 항목에 1번에서 복사한 API token을 붙여 넣는다.
+6) User 항목에 id를 입력하고 Token 항목에 1번에서 복사한 API token을 붙여 넣는다.
 ![API_TOKEN](https://raw.githubusercontent.com/lomi525/packages-test/master/images/6.png)
 7)Add Service 를 클릭하여 저장한다.
+
+
+
+-----------------
+# Private 저장소를 사용하기위한 composer.json 설정
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "https://test.gitlab.com/test.git"
+        }
+    ]
+}
+```
+* 비밀번호가 있는 경우  ~/.composer/auth.json 에 저장 된다
+
+
