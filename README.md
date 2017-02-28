@@ -140,6 +140,11 @@ git remote add origin https://github.com/lomi525/test.git
 git push -u origin master
 ```
 
+### Package Repository 태그달기
+Git저장소에 등록된 패키지는 tag로 버전관리가된다.
+> v1.0.0
+* 버전태그 할때는 1.0.0 부터 시각해야지 Compser가 인식하는듯 합니다.(삽질ㅜㅜ)
+
 
 ### Package Repository 등록하기
 
@@ -168,7 +173,9 @@ github 에 패키지의 새 버전을 릴리스했다고 가정해 보자.
 
 
 -----------------
-# Private 저장소를 사용하기위한 composer.json 설정
+# Private 저장소를 사용하기
+
+composer.json 설정
 ```json
 {
     "repositories": [
