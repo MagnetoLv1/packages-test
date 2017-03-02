@@ -5,7 +5,7 @@ Laravel 패키지 제작 Demo
 Composer 를 이용한 패키지 생성
 conposer init 실행
 
-> $ composer init
+$ composer init
 ```bash
 
 
